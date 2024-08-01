@@ -1,0 +1,39 @@
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="styleSheet.css"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+`       <script src="retrieveAddTaskToDoListForm.js"></script>
+	  </head>
+	<body>
+		<div class="buttonBar">
+            <a href="toDoList.html">
+			    <button class="personbtn"><i class="fa fa-arrow-right"></i> Back</button>
+            </a>
+		</div>
+		<h1>
+			Add Task
+		</h1>
+		<div class="todaysTasks">
+			<h2>
+				Today's Tasks
+			</h2>
+            <div id="tasks"></div>
+		</div>
+		<div class="addTask">
+			<h2>
+				Add Task
+			</h2>
+            <form>
+                <label for="title">Title</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="time">Time</label><br>
+                <input type="time" id="time" name="time"><br>
+              </form>
+              <button class="btnAddTask" id="btnAddTaskToDoList"><i class="fa fa-plus"></i> Submit</button>
+              
+
+
+		</div>
+	</body>
+</html>

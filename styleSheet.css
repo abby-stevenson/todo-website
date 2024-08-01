@@ -1,0 +1,328 @@
+h1 {
+	color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    font-size: 100;
+    width:100%;
+    margin: 10px 10px 10px 10px;
+}
+body {
+    background-color: #885A5A;
+  }
+
+h2 {
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+}
+
+.todaysTasks {
+    border-radius: 25px;
+    position: absolute;
+    left: 15px;
+    width: 37%;;
+    height: 80%;
+    background-color: #FDC4CD;
+    border:#885A5A;
+  }
+
+.calendarBox {
+    border-radius: 25px;
+    position: absolute;
+    right: 15px;
+    width: 57%;;
+    height: 80%;
+    background-color: #94B9AF;
+    border:#885A5A;
+  }
+
+  .calendar {
+    height: 70%;
+    width: 80%;
+    background-color: #885A5A;
+    border-color: black;
+    border-radius: 30px;
+    padding: 20px;
+    position: absolute;
+    overflow: hidden;
+    margin: 30px 30px 30px 30px;
+    
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    background-color: #FDC4CD;
+    padding: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.calendar-body {
+    padding: 10px;
+}
+
+.calendar-week-day {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.calendar-week-day div {
+    display: grid;
+    place-items: center;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.calendar-days div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    animation: to-top 1s forwards;
+}
+
+.calendar-days div span {
+    position: absolute;
+}
+
+.calendar-days div:hover span {
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.calendar-days div span:nth-child(1),
+.calendar-days div span:nth-child(3) {
+    width: 2px;
+    height: 0;
+}
+
+.calendar-days div:hover span:nth-child(1),
+.calendar-days div:hover span:nth-child(3) {
+    height: 100%;
+}
+
+.calendar-days div span:nth-child(1) {
+    bottom: 0;
+    left: 0;
+}
+
+.calendar-days div span:nth-child(3) {
+    top: 0;
+    right: 0;
+}
+
+.calendar-days div span:nth-child(2),
+.calendar-days div span:nth-child(4) {
+    width: 0;
+    height: 2px;
+    background-color: var(--color-txt);
+}
+
+.calendar-days div:hover span:nth-child(2),
+.calendar-days div:hover span:nth-child(4) {
+    width: 100%;
+}
+
+.calendar-days div span:nth-child(2) {
+    top: 0;
+    left: 0;
+}
+
+.calendar-days div span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
+
+.calendar-days div:hover span:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.calendar-days div:hover span:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.calendar-days div:hover span:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.calendar-days div.curr-date,
+.calendar-days div.curr-date:hover {
+    background-color: #94B9AF;
+    border-radius: 50%;
+}
+
+.calendar-days div.curr-date span {
+    display: none;
+}
+
+.month-picker {
+    display: flex;
+    align-items: center;
+}
+
+.month-change {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.month-change:hover {
+    background-color: white;
+}
+
+.year-picker {
+    display: flex;
+    align-items: center;
+}
+
+.year-change {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.year-change:hover {
+    background-color: white;
+}
+
+.calendar-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.toggle {
+    display: flex;
+}
+
+.toggle span {
+    margin-right: 10px;
+    color: white;
+}
+
+  .addTask{
+    border-radius: 25px;
+    position: absolute;
+    right: 15px;
+    width: 57%;;
+    height: 80%;
+    background-color: #90A583;
+    border:#885A5A;
+  }
+
+
+  .btn {
+    background-color:#885A5A;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    left:0;
+    border-radius: 25px;
+  }
+
+  .btn:hover {
+    background-color: white;
+    }
+
+  .personBtn {
+    background-color:#885A5A;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position:absolute;
+    right:15;
+    border-radius: 25px;
+  }
+
+  .personBtn:hover {
+    background-color: white;
+    }
+
+  .btnAddTask {
+    background-color:#90A583;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    left:15;
+    padding: 30px 20px;
+    border-radius: 25px;
+  }
+
+  .btnAddTask:hover {
+    background-color: white;
+    }
+
+
+  .buttonBar {
+    border-radius: 25px;
+    position: absolute;
+    width: 100%;;
+  }
+
+  input {
+    width: 96%;
+    border:#885A5A;
+    border-radius: 25px;
+    padding: 30px 20px;
+    margin: 15px 15px 15px 15px;
+    background-color: #D9D9D9;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  label {
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: right;
+    font-size: 20;
+    width:100%;
+    padding: 30px 20px;
+  }
+
+  #tasks {
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+    font-size: 20;
+    width:100%;
+    padding: 30px 20px;
+  }
+
+  #timing {
+    color: #90A583;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+    font-size: 26;
+    width:100%;
+  }

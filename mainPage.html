@@ -1,0 +1,73 @@
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="styleSheet.css"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  </head>
+	<body>
+		<div class="buttonBar">
+			<a href="toDoList.html">
+				<button class="btn"><i class="fa fa-check"></i> To Do List</button>
+			</a>
+			<a href="addTaskCalendar.html">
+				<button class="btn"><i class="fa fa-plus"></i> Add Task</button>
+			</a>
+			<button class="personBtn"><i class="fa fa-user"></i> User</button>
+		</div>
+		<h1>
+			Calendar
+		</h1>
+		<div class="todaysTasks">
+			<h2>
+				Today's Tasks
+			</h2>
+		</div>
+		<div class="calendarBox">
+			<h2>
+				Calendar
+			</h2>
+			
+			<body class="light">
+
+				<div class="calendar">
+					<div class="calendar-header">
+						<div class=" month-picker">
+							<span class="month-change" id="prev-month">
+								<i class="fa fa-arrow-left" style="font-size:16px;"></i>
+							</span>
+							<span id="month">January</span>
+							<span class="month-change" id="next-month">
+								<i class="fa fa-arrow-right" style="font-size:16px;"></i>
+							</span>
+						</div>
+						<div class="year-picker">
+							<span class="year-change" id="prev-year">
+								<i class="fa fa-arrow-left" style="font-size:16px;"></i>
+							</span>
+							<span id="year">2024</span>
+							<span class="year-change" id="next-year">
+								<i class="fa fa-arrow-right" style="font-size:16px;"></i>
+							</span>
+						</div>
+					</div>
+					<div class="calendar-body">
+						<div class="calendar-week-day">
+							<div>Sun</div>
+							<div>Mon</div>
+							<div>Tue</div>
+							<div>Wed</div>
+							<div>Thu</div>
+							<div>Fri</div>
+							<div>Sat</div>
+						</div>
+						<div class="calendar-days"></div>
+					</div>
+				   
+					<div class="month-list"></div>
+				</div>
+				<script src="calendar.js"></script>
+			</body>
+
+
+		</div>
+	</body>
+</html>
