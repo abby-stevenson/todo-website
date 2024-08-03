@@ -310,7 +310,7 @@ h2 {
     padding: 30px 20px;
   }
 
-  #tasks {
+  .tasks {
     color: black;
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: left;
@@ -319,7 +319,7 @@ h2 {
     padding: 30px 20px;
   }
 
-  #timing {
+  .timing {
     color: #90A583;
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: left;
