@@ -8,8 +8,6 @@ window.addEventListener('load', () => {
 });
 
 function loadToDoList() {
-    console.log("Hi");
-    console.log(todaysToDoListHTML);
     localStorage.setItem('toDoListTasks', todaysToDoListHTML);
     window.location.href = 'toDoList.html';
 }

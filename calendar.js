@@ -84,3 +84,25 @@ document.querySelector('#next-year').onclick = () => {
     ++curr_year.value
     generateCalendar(curr_month.value, curr_year.value)
 }
+
+function clearTodaysTasks() {
+    localStorage.clear();
+    document.getElementById('mainPageTasks').innerHTML = "";
+}
+
+//adds the event listener
+document.addEventListener('DOMContentLoaded', (event) => {  
+    const button = document.getElementById('clearTodaysTasksMP');
+    if (button) {
+        button.addEventListener('click', clearTodaysTasks);
+    }
+});
+
+window.addEventListener('load', () => {
+    const todaysToDoListHTML = localStorage.getItem('toDoListTasks');
+    if (todaysToDoListHTML) {
+        document.getElementById('mainPageTasks').innerHTML = todaysToDoListHTML;
+    } else {
+        console.error('No To-Do List data found in localStorage');
+    }
+});
