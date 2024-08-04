@@ -36,12 +36,18 @@ function retrieveAddTaskToDoList() {
                 }
             });
         });
+        
+        todaysToDoListHTML = resultDiv.innerHTML;
+        console.log(todaysToDoListHTML);
     }
 }
 
 //adds the event listener
 document.addEventListener('DOMContentLoaded', (event) => {  
     const button = document.getElementById('btnAddTaskToDoList');
-    button.addEventListener('click', retrieveAddTaskToDoList);
+    if (button) {
+        button.addEventListener('click', retrieveAddTaskToDoList);
+    }
+    
 });
 
