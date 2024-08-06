@@ -38,7 +38,6 @@ h2 {
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: left;
     font-size: 20;
-    
   }
 
   .calendar {
@@ -73,14 +72,22 @@ h2 {
 .calendar-week-day {
     height: 50px;
     display: grid;
+    justify-content: space-between;
     grid-template-columns: repeat(7, 1fr);
     font-weight: 600;
     font-family: "Lucida Console", "Courier New", monospace;
+    gap: 10px;
 }
 
 .calendar-week-day div {
     display: grid;
+    padding: 5px;
     place-items: center;
+}
+
+.calendar-week-day span {
+  flex: 1;
+  text-align: center;
 }
 
 .calendar-days {
@@ -98,80 +105,12 @@ h2 {
     padding: 5px;
     position: relative;
     cursor: pointer;
-    animation: to-top 1s forwards;
-}
-
-.calendar-days div span {
-    position: absolute;
-}
-
-.calendar-days div:hover span {
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-}
-
-.calendar-days div span:nth-child(1),
-.calendar-days div span:nth-child(3) {
-    width: 2px;
-    height: 0;
-}
-
-.calendar-days div:hover span:nth-child(1),
-.calendar-days div:hover span:nth-child(3) {
-    height: 100%;
-}
-
-.calendar-days div span:nth-child(1) {
-    bottom: 0;
-    left: 0;
-}
-
-.calendar-days div span:nth-child(3) {
-    top: 0;
-    right: 0;
-}
-
-.calendar-days div span:nth-child(2),
-.calendar-days div span:nth-child(4) {
-    width: 0;
-    height: 2px;
-    background-color: var(--color-txt);
-}
-
-.calendar-days div:hover span:nth-child(2),
-.calendar-days div:hover span:nth-child(4) {
-    width: 100%;
-}
-
-.calendar-days div span:nth-child(2) {
-    top: 0;
-    left: 0;
-}
-
-.calendar-days div span:nth-child(4) {
-    bottom: 0;
-    right: 0;
-}
-
-.calendar-days div:hover span:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.calendar-days div:hover span:nth-child(3) {
-    transition-delay: 0.4s;
-}
-
-.calendar-days div:hover span:nth-child(4) {
-    transition-delay: 0.6s;
 }
 
 .calendar-days div.curr-date,
 .calendar-days div.curr-date:hover {
     background-color: #94B9AF;
     border-radius: 50%;
-}
-
-.calendar-days div.curr-date span {
-    display: none;
 }
 
 .month-picker {
@@ -217,15 +156,6 @@ h2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-.toggle {
-    display: flex;
-}
-
-.toggle span {
-    margin-right: 10px;
-    color: white;
 }
 
   .addTask{
