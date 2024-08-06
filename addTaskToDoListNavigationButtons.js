@@ -3,11 +3,14 @@ window.addEventListener('load', () => {
     if (todaysToDoListHTML) {
         document.getElementById('tasks').innerHTML = todaysToDoListHTML;
     } else {
-        console.error('No To-Do List data found in localStorage');
+        document.getElementById('tasks').innerHTML = `<label> No Tasks For Today </label>`
+        //console.error('No To-Do List data found in localStorage');
     }
 });
 
 function loadToDoList() {
+    //const todaysToDoListHTML = localStorage.getItem('toDoListTasks') + document.getElementById('tasks').innerHTML;
+    const todaysToDoListHTML = document.getElementById('tasks').innerHTML;
     localStorage.setItem('toDoListTasks', todaysToDoListHTML);
     window.location.href = 'toDoList.html';
 }

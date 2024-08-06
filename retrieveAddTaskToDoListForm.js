@@ -4,19 +4,26 @@ function retrieveAddTaskToDoList() {
     //check the time and description are there
     var title = $("[name='title']").val();
     var time = $("[name='time']").val();
-   console.log(title);
-    if (title == ''|| time == '') {
-        alert("Description or time is empty");
+    if (title == '') {
+        alert("Description is empty");
+    }
+    if (time == '') {
+        alert("Time is empty");
     }
     else {
         var resultDiv = document.getElementById('tasks');
-        resultDiv.innerHTML += `<span class = "event"> <span class = "timing"> ${time} </span> <i class="fa fa-arrow-right"></i> ${title} </span> <br>`;
+        resultDiv.innerHTML += `<span class = "event"> 
+                                    <span class = "timing"> ${time} </span> 
+                                    <i class="fa fa-arrow-right"></i> 
+                                    <span class = "description">${title} </span>
+                                    </span> <br>`;
         //creates a list of just times to be sorted
         const timings = [];
         const allEvents = document.querySelectorAll('.event');
         allEvents.forEach(eventElement => {
             const timingElement = eventElement.querySelector('.timing');
-            if (timingElement) {
+        
+            if (timingElement && timingElement != '') {
                 timings.push(timingElement.textContent.trim());
             }
         });
@@ -36,9 +43,7 @@ function retrieveAddTaskToDoList() {
                 }
             });
         });
-        
         todaysToDoListHTML = resultDiv.innerHTML;
-        console.log(todaysToDoListHTML);
     }
 }
 

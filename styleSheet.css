@@ -34,6 +34,11 @@ h2 {
     height: 80%;
     background-color: #94B9AF;
     border:#885A5A;
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+    font-size: 20;
+    
   }
 
   .calendar {
@@ -326,3 +331,29 @@ h2 {
     font-size: 26;
     width:100%;
   }
+
+  .description {
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+    font-size: 20;
+    width:100%;
+    padding: 30px 20px;
+  }
+
+  #toDoListFrame ul {
+    margin: 0;
+    list-style: none;
+    float: left;
+  }
+
+  #toDoListFrame {
+    padding: 30px 20px;
+  }
+
+  
+  li input[type="checkbox"] {
+    width: 20px;
+    height: 20px; 
+    position: relative;
+}
