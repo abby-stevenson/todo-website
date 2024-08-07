@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  </head>
 	<body>
+		<!--All the navigation buttons-->
 		<div class="buttonBar">
 			<a href="toDoList.html">
 				<button class="btn"><i class="fa fa-check"></i> To Do List</button>
@@ -21,6 +22,7 @@
 			<h2>
 				Today's Tasks
 			</h2>
+			<!--Displays today's tasks-->
 			<div class = "tasks" id = "mainPageTasks">
 			</div>
 		</div>
@@ -29,6 +31,7 @@
 				Calendar
 			</h2>
 				<div class="calendar">
+					<!--Sets up the header for the calendar with the buttons to change month and year-->
 					<div class="calendar-header">
 						<div class="month-picker">
 							<span class="month-change" id="prev-month">
@@ -49,6 +52,7 @@
 							</span>
 						</div>
 					</div>
+					<!--Sets up the headers with the days of the week-->
 					<div class="calendar-body">
 						<div class="calendar-week-day">
 							<div>Sun</div>
@@ -59,12 +63,11 @@
 							<div>Fri</div>
 							<div>Sat</div>
 						</div>
+						<!--Empty div element to put the grid in (which is made in the javascript code)-->
 						<div class="calendar-days"></div>
 					</div>
-				   
-					<div class="month-list"></div>
-				</div>
+				<!--Links the javascript at the end so that it only runs once the page has been fully loaded so has 
+				access to all the elements-->
 				<script src="calendar.js"></script>
-		</div>
 	</body>
 </html>
