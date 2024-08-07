@@ -39,13 +39,26 @@ function clearTodaysTasks() {
     document.getElementById('toDoListTasks').innerHTML = "";
 }
 
+//removes all the tasks from the to do list
+function clearToDoList() {
+    //localStorage.removeItem('toDoListTasks');
+    document.getElementById('toDoList').innerHTML = "";
+}
+
+
 //adds an event listener for when the page is loaded aside from any images
 document.addEventListener('DOMContentLoaded', (event) => {  
-    const button = document.getElementById('clearTodaysTasksTDL');
+    const todaysTasksClearButton = document.getElementById('clearTodaysTasksTDL');
+    const todoListClearButton = document.getElementById('clearTodaysTasksList');
     //if the clear button exists
-    if (button) {
+    if (todaysTasksClearButton) {
         //adds an event listener to the button so that when it is clicked it clears the tasks
-        button.addEventListener('click', clearTodaysTasks);
+        todaysTasksClearButton.addEventListener('click', clearTodaysTasks);
+    }
+    //if the clear to do list button exists
+    if (todoListClearButton) {
+        //adds an event listener to the button so that when it is clicked it clears the tasks
+        todoListClearButton.addEventListener('click', clearToDoList);
     }
 });
 

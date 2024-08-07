@@ -185,6 +185,22 @@ h2 {
     background-color: white;
     }
 
+    .toDoListBtn {
+      background-color: #94B9AF;
+      border: none;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+
+      border-radius: 25px;
+    }
+  
+    .toDoListBtn:hover {
+      background-color: white;
+      }
+
   .personBtn {
     background-color:#885A5A;
     border: none;

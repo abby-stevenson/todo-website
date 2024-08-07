@@ -25,6 +25,7 @@
 			<h2>
 				Today's Tasks
 			</h2>
+			
 			<!--Element to display the tasks in-->
 			<div class = "tasks" id = "toDoListTasks">
 			</div>
@@ -32,7 +33,16 @@
 		<div class="calendarBox">
 			<h2>
 				To Do List
+			<!--Buttons to interact with the todo list-->
+			<div class="toDoListbuttonBar">
+				<button class="toDoListBtn" id = "clearTodaysTasksList" ><i class="fa fa-trash"></i> Clear To Do List</button>
+				<a href="addTaskToDoList.html">
+					<button class="toDoListBtn"><i class="fa fa-plus"></i> Add Task To Just To Do List</button>
+				</a>
+			</div>
+				
 			</h2>
+			
 			<div class = "tasks" id = "toDoListFrame">
 				<!--The todo list to add elements to in the javascript-->
 				<ul id= toDoList>
