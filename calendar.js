@@ -125,23 +125,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const nextYearButton = document.getElementById('next-year');
     //if the button exists on the current page
     if (clearButton) {
-        //adds an event listener so when the clear button is pressed it runs the clearTodaysTasks fucntion
+        //adds an event listener so when the clear button is pressed it runs the clearTodaysTasks function
         clearButton.addEventListener('click', clearTodaysTasks);
     }
     if (prevMonthButton) {
-        //adds an event listener so when the clear button is pressed it runs the clearTodaysTasks fucntion
+        //adds an event listener so when the clear button is pressed it runs the previous month function
         prevMonthButton.addEventListener('click', previousMonth);
     }
     if (nextMonthButton) {
-        //adds an event listener so when the clear button is pressed it runs the clearTodaysTasks fucntion
+        //adds an event listener so when the clear button is pressed it runs the next month function
         nextMonthButton.addEventListener('click', nextMonth);
     }
     if (prevYearButton) {
-        //adds an event listener so when the clear button is pressed it runs the clearTodaysTasks fucntion
+        //adds an event listener so when the clear button is pressed it runs the previous year function
         prevYearButton.addEventListener('click', previousYear);
     }
     if (nextYearButton) {
-        //adds an event listener so when the clear button is pressed it runs the clearTodaysTasks fucntion
+        //adds an event listener so when the clear button is pressed it runs the next year function
         nextYearButton.addEventListener('click', nextYear);
     }
 });

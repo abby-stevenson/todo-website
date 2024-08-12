@@ -12,10 +12,6 @@
             <a href="mainPage.html">
 			    <button class="btn"><i class="fa fa-calendar"></i> Calendar</button>
             </a>
-			<a href="addTaskToDoList.html">
-				<button class="btn"><i class="fa fa-plus"></i> Add Task</button>
-			</a>
-			<button class="btn" id = "clearTodaysTasksTDL"><i class="fa fa-trash"></i> Clear Today's Tasks</button>
 			<button class="personBtn"><i class="fa fa-user"></i> User</button>
 		</div>
 		<h1>
@@ -24,6 +20,13 @@
 		<div class="todaysTasks">
 			<h2>
 				Today's Tasks
+				<!--Buttons to interact with todays tasks page-->
+				<div class = "todaysTasksButtonBar">
+					<button class="todaysTasksBtn" id = "clearTodaysTasksTDL"><i class="fa fa-trash"></i> Clear Today's Tasks</button>
+					<a href="addTaskToDoList.html">
+						<button class="todaysTasksBtn"><i class="fa fa-plus"></i> Add Task</button>
+					</a>
+				</div>
 			</h2>
 			
 			<!--Element to display the tasks in-->
@@ -37,7 +40,7 @@
 			<div class="toDoListbuttonBar">
 				<button class="toDoListBtn" id = "clearTodaysTasksList" ><i class="fa fa-trash"></i> Clear To Do List</button>
 				<a href="addTaskToDoList.html">
-					<button class="toDoListBtn"><i class="fa fa-plus"></i> Add Task To Just To Do List</button>
+					<button class="toDoListBtn"><i class="fa fa-plus"></i> Add Task </button>
 				</a>
 			</div>
 				
