@@ -9,10 +9,6 @@
 			<a href="toDoList.html">
 				<button class="btn"><i class="fa fa-check"></i> To Do List</button>
 			</a>
-			<a href="addTaskCalendar.html">
-				<button class="btn"><i class="fa fa-plus"></i> Add Task</button>
-			</a>
-			<button class="btn" id = "clearTodaysTasksMP"><i class="fa fa-trash"></i> Clear Today's Tasks</button>
 			<button class="personBtn"><i class="fa fa-user"></i> User</button>
 		</div>
 		<h1>
@@ -21,6 +17,13 @@
 		<div class="todaysTasks">
 			<h2>
 				Today's Tasks
+			
+				<div class = "todaysTasksButtonBar">
+					<button class="todaysTasksBtn" id = "clearTodaysTasksMP"><i class="fa fa-trash"></i> Clear Today's Tasks</button>
+					<a href="addTaskCalendar.html">
+						<button class="todaysTasksBtn"><i class="fa fa-plus"></i> Add Task</button>
+					</a>
+				</div>
 			</h2>
 			<!--Displays today's tasks-->
 			<div class = "tasks" id = "mainPageTasks">
