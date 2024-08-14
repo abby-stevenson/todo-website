@@ -8,24 +8,20 @@ window.addEventListener('load', () => {
         document.getElementById('toDoListTasks').innerHTML = todaysToDoListHTML;
         //creates a reference to the element where the todo list is displayed
         var resultDiv = document.getElementById('toDoList');
-        //creates a empty list to store the descriptions
-        const descriptions = [];
-        //stores all the events on the page in a constant 
-        const allEvents = document.querySelectorAll('.event');
-        //loops through all the events
-        allEvents.forEach(eventElement => {
-            //isolates the description from the current event
-            const descriptionElement = eventElement.querySelector('.description');
-            //if the desription exits
-            if (descriptionElement) {
-                //adds the text content of the description to the list without any surrounding whitespace
-                descriptions.push(descriptionElement.textContent.trim());
+        //if this element exists
+        if (resultDiv) {
+            //gets the list from local storage
+            const list = localStorage.getItem("toDoListNoTime");
+            //if the list is not null
+            if (list) {
+                //sets the list to be displayed in the results element
+                resultDiv.innerHTML = list;
             }
-        });
-        //loops through all the descriptions and displays them each on a new line 
-        descriptions.forEach((description) => {
-            resultDiv.innerHTML += `<li><input type="checkbox"> ${description} </li>`;
-                });
+            else {
+                //displays a message if there were no tasks in the local storage
+                document.getElementById('toDoList').innerHTML = `<label> No Tasks For Today </label>`
+            }
+        }
     } 
     else {
         //displays a message if there were no tasks in the local storage
@@ -41,7 +37,7 @@ function clearTodaysTasks() {
 
 //removes all the tasks from the to do list
 function clearToDoList() {
-    //localStorage.removeItem('toDoListTasks');
+    localStorage.removeItem('toDoListNoTime');
     document.getElementById('toDoList').innerHTML = "";
 }
 
