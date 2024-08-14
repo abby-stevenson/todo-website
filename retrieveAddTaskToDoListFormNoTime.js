@@ -7,16 +7,21 @@ function retrieveAddTaskToDoList() {
         alert("Description is empty");
     }
     else {
-        var resultDiv = '';
+        var result = '';
+        const messageDiv = document.getElementById('messageBox')
         //checks that there are tasks stored
         if(localStorage.getItem("toDoListNoTime") != null) {
             //stores these tasks in a variable
-           resultDiv = localStorage.getItem("toDoListNoTime");
+           result = localStorage.getItem("toDoListNoTime");
         }
         //adds the new task to the list
-        resultDiv += `<li><input type="checkbox"> <span class = "title">${title} </span> </li>`;
+        result += `<li><input type="checkbox"> ${title} </li>`;
         //stores all the tasks along with the new task in local storage
-        localStorage.setItem("toDoListNoTime", resultDiv);                         
+        localStorage.setItem("toDoListNoTime", result);  
+        messageDiv.innerHTML = `<label>Task Added!</label>`;
+        setTimeout(() => {
+            messageDiv.innerHTML = ``;
+        }, 1000);                       
     }
 }
 
