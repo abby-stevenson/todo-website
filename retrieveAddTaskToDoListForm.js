@@ -15,11 +15,11 @@ function retrieveAddTaskToDoList() {
         //gets the current list of tasks on the page
         var resultDiv = document.getElementById('tasks');
         //adds the new task to the list
-        resultDiv.innerHTML += `<span class = "event"> 
+        resultDiv.innerHTML += `<div class = "event"> 
                                     <span class = "timing"> ${time} </span> 
                                     <i class="fa fa-arrow-right"></i> 
                                     <span class = "description">${title} </span>
-                                    </span> <br>`;
+                                    </div>`;
         //creates a list of just times to be sorted
         const timings = [];
         //stores all the events on the page (including the new one) in a constant
@@ -54,7 +54,7 @@ function retrieveAddTaskToDoList() {
                 //checks if both the current time element and the time of the current event
                 if (timingElement && timingElement.textContent.trim() === time) {
                     //adds the html of the event element to the page so that it can be displayed
-                    resultDiv.innerHTML += eventElement.outerHTML + '<br>';
+                    resultDiv.innerHTML += eventElement.outerHTML ; // + '<br>';
                 }
             });
         });

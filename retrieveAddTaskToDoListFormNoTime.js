@@ -14,7 +14,7 @@ function retrieveAddTaskToDoList() {
            resultDiv = localStorage.getItem("toDoListNoTime");
         }
         //adds the new task to the list
-        resultDiv += `<li><input type="checkbox"> ${title} </li>`;
+        resultDiv += `<li><input type="checkbox"> <span class = "title">${title} </span> </li>`;
         //stores all the tasks along with the new task in local storage
         localStorage.setItem("toDoListNoTime", resultDiv);                         
     }
